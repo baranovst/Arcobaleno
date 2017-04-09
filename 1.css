@@ -1,0 +1,42 @@
+.container {
+    margin: -5px 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+
+.container2 {
+    margin: -135px 0 0 0;
+
+    text-align: center;
+	
+}
+
+@media (max-width: 1200px)
+style.css:2166
+.select-menu {
+    display: block !important;
+    width: 100%;
+    border: 1px solid #000;
+    background: #d9d9d9;
+    color: #000000;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.select-menu {
+		position: relative;
+		top: -145px;
+		left: 390px;
+		width: 600px;
+        height: 20px;
+            background: white;
+       	
+}
+
+.brand{
+		position: relative;
+		top: -130px;
+		left: px;
+	      	
+}
