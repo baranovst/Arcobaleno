@@ -6,76 +6,235 @@
         <title>Документ без названия</title>
 		 <link rel="stylesheet" type="text/css" href="1.css">
 		 <link rel="stylesheet" type="text/javascript" href="2.css">
+
 <style>
+.menu
+{
+position: relative;
+top: 10%;
+left: 35%;
+width: 100%;
+height: 0%;
+background-color: ;
+}
+
+.menu ul li{
+  padding: 10px;
+  
+}
+.menu ul > li:hover{
+  background-color: none; /* цвет выбранного пункта меню после открытия */
+}
+.menu ul ul > li:hover{
+  background-color: none;  /*цвет выбранного пункта подменю*/
+}
+.menu ul li, .menu ul{
+  display: inline-block;
+  background-color: none; 
+}
+.menu ul{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: none; /*заливка пунктов (красный)меню*/
+  width: 700px;
+	
+}
+.menu ul ul{
+  display: none;
+  position: absolute;
+  background-color: white; /*заливка выпадающих пунктов меню (синий) */
+  margin-top: 10px;
+  margin-left: -10px;
+  
+} 
+.menu ul a{
+  color: black; /*цвет букв (белый)*/
+  text-decoration: none;
+  background-color: none;
+	
+}
+.menu ul ul a{
+  color: none; /*цвет букв выпадающего меню (белый)*/
+  text-decoration: none;
+}
+.menu li:hover ul{
+  display: block;
+}
+
+.menu li:hover li{
+  display: block;
+}
+
+.brand
+{
+position: relative;
+top: 40%;
+left: 0%;
+width: 30%;
+height: 48%;
+}
+
+
+body
+{
+margin: 0;
+background-color: none;
+}
+
+header
+{
+background-image:url("/project kuru/backgrounds/1.png");
+background-repeat: repeat-x;
+height: 130px;
+}
+
+section
+{
+background-image:url("/project kuru/backgrounds/4.png");
+background-repeat: repeat-x;
+position: relative;
+top: -4px;
+left: 0%;
+}
+
+.product
+{
+display: inline-block;
+padding: 0px 50px; 
+margin: 15px;
+
+}
+
+.product img 
+{
+border-radius: 25px; 
+box-shadow: 15px 15px 30px rgba(0,0,0,0.6); <!--тени-->
+}
+
+.product p
+{
+text-align: center;
+}
+
+.price2
+{
+color: rgb(229, 142, 18);
+text-align: center;
+}
+
+.form
+{
+display: block;
+}
+
+footer
+{
+background-image:url("/project kuru/backgrounds/5.png");
+background-repeat: repeat-x;
+position: relative;
+top: 0px;
+left: 0%;
+width: 100%;
+height: 70px;
+
+}
+
+footer p
+{
+position: relative;
+top: 25px;
+left: 0%;
+text-align:center;
+color: rgb(130, 50, 80);
+}
 
 </style>
 </head>
 
 <body>
- <header> 
-		<div class="container">
-			<img src="1.PNG" alt>
-			<h1 class="brand">
-				<img src="3.png" alt>
-			</h1>
-		</div >
+<form>
+
+<input type="text" pattern="\d" placeholder="Введите 1 число"> <input type="submit">
+
+</form>
+
+	<header>
+<nav class="menu">
+  <ul>
+    <li><a href="#">ГЛАВНАЯ</a></li>
+    <li><a href="#">МЕНЮ</a>
+	<li><a href="#">ЗАКАЗ СТОЛИКА</a>
+	<li><a href="#">МЕРОПРИЯТИЯ</a>
+      <ul>
+        <li><a href="#">Lorem.2</a></li>
+        <li><a href="#">Eveniet.2</a></li>
+        <li><a href="#">Omnis.2</a></li>
+        <li><a href="#">Beatae.2</a></li>
+      </ul>
+    </li>
+    <li><a href="#">КОНТАКТЫ</a></li>
+	<li><a href="#">ВХОД</a>
+		<ul class="submenu">
+		
+		<form action="">
+		<li>E-mail<input type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"></li>
+		<li>Password<input type="text" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></li><!-- Не менее восьми символов, содержащих хотя бы одну цифру и символы из верхнего и нижнего регистра-->
+		<li><input type="submit"></li>
+		</form>
+		</ul>
+	</li>
 	
-		<select class="select-menu" style="display: inline-block;">
-			<option value="#">Перейти к...</option>
-			<option value="http://etrecafe.ru/" selected="selected">Главная</option>
-			<option value="http://etrecafe.ru/#">––Фотогалерея</option>
-			<option value="http://etrecafe.ru/category">Меню</option>
-			<option value="http://etrecafe.ru/booking">Заказ столика</option>
-			<option value="http://etrecafe.ru/blog/">Мероприятия</option>
-			<option value="http://etrecafe.ru/feedback/">Контакты</option>
-			<option value="http://etrecafe.ru/guestbook/">Отзывы</option>
-		</select>
- </header>
-    
-  <article> 
-	<div class="container2">
+	
+	
+	
+	
+  </ul>
+  
+</nav>
+
+		<div class="brand">
+			<img src="/project kuru/backgrounds/3.png" alt="brand"><!--содержимое-->
+		</div>
 		
-		<img src="2.PNG" alt>
-		
+	</header>
+
+	<div class="picture" style="background-color: green;"> 
+		<img src="/project kuru/backgrounds/2.png" alt="cafe"><!--содержимое-->
+	</div>
+	
+<section> 
+	<div class="product">
+		<img src="/project kuru/ramk_and_prod/sod1.png" alt="Вино"> <!--содержимое-->
+		<p style="color: rgb(153, 96, 21);">Вино</p>  <!--название товара-->
+		<p class="price2"> 2222.00 руб.</p> <!--цвет цены-->
 	</div >
-  </article>
-  
-  
-  <section> 
-  <div class="container3">
-		
-		<img src="4.png" alt>  <!--фон-->
-			<ul class="list1"> <!--в линию все популярные товары-->
-				<li class="span"> <!--отдельный-->
-				
-					<div>
-					<img src="2.jpg" alt=""> </img> <!--содержимое-->
-					</div>
-					
-					<p>!!!</p>  <!--название товара-->
-					<p class="price2" style="color: rgb(229, 142, 18);"> 2222.00 руб.</p> <!--цвет цены-->
-					<figure>
-					<img src="2.jpg" alt=""> </img> <!--рамка-->
-					</figure>
-				</li>
-				
-			</ul>
-		</img>	
+
+	<div class="product">
+		<img src="/project kuru/ramk_and_prod/sod2.png" alt="Супчик"> <!--содержимое-->
+	    <p style="color: rgb(153, 96, 21);">Супчик</p>  <!--название товара-->
+		<p class="price2"> 2222.00 руб.</p> <!--цвет цены-->
 	</div >
 	
-	 <div class="container4">
-		
-		<img src="5.png" alt>
-		
+	<div class="product">
+		<img src="/project kuru/ramk_and_prod/sod3.png" alt="Штрудель"> <!--содержимое-->
+	    <p style="color: rgb(153, 96, 21);">Штрудель</p>  <!--название товара-->
+		<p class="price2"> 2222.00 руб.</p> <!--цвет цены-->
 	</div >
-  </section>
-  
-  <footer>
-  
-  </footer>
-  
+	
+	<div class="product">
+		<img src="/project kuru/ramk_and_prod/sod4.png" alt="Гнездо глухаря"> <!--содержимое-->
+	    <p style="color: rgb(153, 96, 21);">Гнездо глухаря</p>  <!--название товара-->
+		<p class="price2"> 2222.00 руб.</p> <!--цвет цены-->
+	</div >
+ </section>
+
+ <footer>
+<p> Зварычев и Баранов (С)</p>
+		
+</footer>
+ 
 </body>
 
-
-
+https://habrahabr.ru/post/150972/
 </html>
